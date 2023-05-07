@@ -24,7 +24,7 @@ router.post("/login", async (req,res)=>
                 id:exist.id
             }
          }
-            jwt.sign(payload, 'jwtpassword', {expiresIn:360000}, 
+            jwt.sign(payload, 'jwtpassword', {expiresIn:3600000}, 
             (err,token)=>
             {
                 if(err) throw err
