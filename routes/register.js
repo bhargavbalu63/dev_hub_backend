@@ -24,11 +24,11 @@ router.post("/register", async (req,res)=>
  const exist= await devuser.findOne({email})
  if(exist)
  {
-    return res.status(400).send("user exist")
+    return res.status(400).send("user already exist")
  }
  if(password!=confirmpassword)
  {
-    return res.status(403).send("password didnt match")
+    return res.status(403).send("password didn't match")
  }
  const newUser=  await devuser.create({
     fullname:fullname,

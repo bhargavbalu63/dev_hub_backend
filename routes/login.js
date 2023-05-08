@@ -15,9 +15,9 @@ router.post("/login", async (req,res)=>
          {
             return res.status(400).send("user not registered")
          }
-         if(password!= exist.password)
+         if(password!== exist.password)
          {
-            return res.status(400).send("password mismatch")
+            return res.status(400).send("password missmatch")
          }
          let payload= {
             user:{
